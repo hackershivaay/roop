@@ -1,0 +1,38 @@
+<!---------------------- Drive Note book ---------------->
+
+https://colab.research.google.com/drive/17i8jXSU-4d_bHJfN4kQX_xuuHkcYmotA
+
+<!---------------------- Github Note book --------------->
+
+https://githubtocolab.com/hackershivaay/roop/blob/main/Roop.ipynb
+
+<!---------------------- Directory Link  ---------------->
+
+https://github.com/hackershivaay/roop.git
+
+<!---------------------- Note book Command 1 --------------->
+
+from IPython.display import clear_output
+# @markdown Installation
+from google.colab import drive
+drive.mount('/content/drive')
+!git clone https://github.com/hackershivaay/roop.git
+%cd /content/roop
+!pip install onnxruntime-gpu && pip install -r requirements.txt
+clear_output()
+print('[1;32m system setup completed!')
+
+<!----------------------  Note book Command 2 --------------->
+
+#from IPython.display import clear_output
+# @markdown
+videos = "1.png" #@param {'type': 'string'}
+%cd /content/roop
+!python run.py --reference-face-position 0 --keep-frames --keep-fps --many-faces --temp-frame-quality 1 --output-video-quality 1 --execution-provider cpu -t /content/drive/MyDrive/Roop/"$videos" -o /content/drive/MyDrive/Roop/video/df_"$videos" -s /content/roop/models/aradhya.jpg --frame-processor face_swapper face_enhancer
+#!cp -r /content/drive/MyDrive/Roop/"$videos".mp4 /content/drive/MyDrive/Roop/Original/
+#!rm -r /content/drive/MyDrive/Roop/"$videos".mp4
+#!cp -r /content/drive/MyDrive/Roop/temp/"$videos" /content/drive/MyDrive/Roop/images/
+#!rm -r /content/drive/MyDrive/Roop/temp/"$videos"
+#!rm -r /content/drive/MyDrive/Roop/temp
+print('[1;32m Generated Successful!')
+
