@@ -10,6 +10,10 @@ https://githubtocolab.com/hackershivaay/roop/blob/main/Roop.ipynb
 
 https://github.com/hackershivaay/roop.git
 
+<!---------------------- Roop Command File --------------->
+
+https://github.com/hackershivaay/roop/blob/main/Roop.txt
+
 <!---------------------- Note book Command 1 --------------->
 
 from IPython.display import clear_output
