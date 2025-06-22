@@ -1,6 +1,7 @@
 
 import os
 import subprocess
+from IPython.display import clear_output
 
 def run(cmd):
     print(f"🔧 Running: {cmd}")
@@ -14,8 +15,8 @@ def main():
     os.chdir("roop")
 
     # Install system packages (only works in Colab or Linux)
-   # run("apt-get update --yes")
-   # run("apt-get install -y nvidia-cuda-toolkit")
+    run("apt-get update --yes")
+    run("apt-get install -y nvidia-cuda-toolkit")
 
     # Install Python dependencies
     run("pip install -r /content/roop/requirements.txt")
