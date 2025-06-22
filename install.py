@@ -1,6 +1,7 @@
 import os
 import subprocess
-
+    run("from google.colab import drive")
+    run("drive.mount('/content/drive')")
 def run(cmd):
     print(f"🔧 Running: {cmd}")
     subprocess.run(cmd, shell=True, check=True)
@@ -13,8 +14,8 @@ def main():
     os.chdir("roop")
 
     # Install system packages (only works in Colab or Linux)
-    run("apt-get update --yes")
-    run("apt-get install -y nvidia-cuda-toolkit")
+   # run("apt-get update --yes")
+   # run("apt-get install -y nvidia-cuda-toolkit")
 
     # Install Python dependencies
     run("pip install -r /content/roop/requirements.txt")
