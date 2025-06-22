@@ -1,7 +1,9 @@
+from google.colab import drive
+drive.mount('/content/drive')  # Mount Google Drive
+
 import os
 import subprocess
-    run("from google.colab import drive")
-    run("drive.mount('/content/drive')")
+
 def run(cmd):
     print(f"🔧 Running: {cmd}")
     subprocess.run(cmd, shell=True, check=True)
