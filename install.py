@@ -1,5 +1,3 @@
-from google.colab import drive
-drive.mount('/content/drive')  # Mount Google Drive
 
 import os
 import subprocess
